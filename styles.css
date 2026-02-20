@@ -2,6 +2,7 @@
   --bg: #ffffff;
   --text: #121212;
   --muted: #6b6f72;
+  --summary: #4c5256;
   --line: #c5d3cf;
   --accent: #1f3a34;
   --accent-soft: #edf2f0;
@@ -101,7 +102,7 @@ main {
 h2 {
   margin: 0 0 14px;
   font-size: 18px;
-  color: var(--accent);
+  color: var(--text);
 }
 
 .manifesto {
@@ -136,6 +137,12 @@ li {
 .card strong {
   color: var(--text);
   font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+.card:hover strong,
+.card:focus-visible strong {
+  color: var(--accent);
 }
 
 .card span {
@@ -149,9 +156,47 @@ li {
   gap: 20px;
 }
 
-ul {
+.article-list {
+  display: grid;
+  gap: 14px;
+}
+
+.article-item {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 12px;
+}
+
+.article-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.article-title {
+  font-size: 18px;
+  color: var(--text);
+}
+
+.article-meta {
+  margin: 4px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.tag {
+  color: var(--accent);
+  font-size: 12px;
+}
+
+.date {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.article-summary {
   margin: 0;
-  padding-left: 18px;
+  color: var(--summary);
+  font-size: 14px;
 }
 
 .site-footer {
