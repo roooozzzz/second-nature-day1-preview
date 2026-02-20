@@ -58,21 +58,24 @@ body {
   border: none;
 }
 
-/* Hero / Manifesto - Typography focus */
+/* Hero / Manifesto - Narrow Left Column */
 .hero-manifesto {
-  text-align: center;
-  padding: 20px 0;
+  text-align: left;
+  padding: 40px 0;
+  max-width: 360px; /* Narrow column on the left */
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .hero-manifesto p {
   margin: 0;
-  font-size: 20px; /* Slightly larger for hero feel */
-  line-height: 2.2;
-  color: #222;
+  font-size: 18px;
+  line-height: 2.1;
+  color: #111;
   font-weight: 500;
 }
 
-/* Section Headings - "The Point" kicker style */
+/* Section Headings - "The Point" kicker style - Left aligned */
 h2 {
   font-family: "EB Garamond", serif;
   font-size: 15px;
@@ -81,23 +84,40 @@ h2 {
   margin: 0 0 30px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  text-align: center; /* Center section headers like specific editorial styles */
+  text-align: left; /* Reset to left align */
 }
 
-/* Article List - Restored spacing and elegance */
+/* Article List - First one big */
 .article-list {
   display: flex;
   flex-direction: column;
-  gap: 48px; /* More breathing room */
+  gap: 48px;
 }
 
 .entry {
-  text-align: center; /* Centered articles for "thought space" feel */
+  text-align: left; /* Reset to left align */
+  max-width: 680px; /* Reading width */
 }
 
+/* Featured Styling for the first article */
+.article-list .entry:first-child {
+  margin-bottom: 20px;
+}
+
+.article-list .entry:first-child h3 {
+  font-size: 32px; /* Bigger title */
+  margin-bottom: 12px;
+}
+
+.article-list .entry:first-child .summary {
+  font-size: 18px; /* Bigger summary */
+  color: #333;
+}
+
+/* Standard Articles (subsequent) */
 .entry h3 {
-  margin: 0 0 10px;
-  font-size: 24px;
+  margin: 0 0 8px;
+  font-size: 20px; /* Smaller title */
   font-weight: 500;
   line-height: 1.4;
   font-family: "Source Han Serif SC", serif;
@@ -133,7 +153,7 @@ h2 {
 .directory-nav {
   display: flex;
   flex-direction: column; /* List style as requested in ASCII */
-  align-items: center;
+  align-items: flex-start;
   gap: 16px;
 }
 
@@ -152,7 +172,7 @@ h2 {
 
 /* Paths */
 .path-list {
-  text-align: center;
+  text-align: left;
 }
 
 .path-list p {
@@ -165,7 +185,7 @@ h2 {
 .tag-cloud {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 16px;
 }
 
@@ -178,7 +198,7 @@ h2 {
 
 /* Footer */
 .site-footer {
-  text-align: center;
+  text-align: left;
   font-size: 13px;
   color: var(--meta);
   margin-top: 80px;
