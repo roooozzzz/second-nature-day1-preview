@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Noto+Serif+SC:wght@400;500;600&family=Source+Han+Serif+SC:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
@@ -15,140 +15,109 @@
   <body>
     <div class="container">
       <header class="site-header">
-        <div class="utility-nav">
-          <a href="#">About</a>
-          <a href="#">Archive</a>
-        </div>
-
         <div class="masthead">
           <h1>第二自然</h1>
-          <p class="brand-en">THE SECOND NATURE</p>
+          <p class="brand-en">The Second Nature</p>
         </div>
-
-        <nav class="main-nav" aria-label="main navigation">
-          <a href="#">观念</a>
-          <a href="#">阅读</a>
-          <a href="#">审美</a>
-          <a href="#">写作</a>
-          <a href="#">现实</a>
-          <a href="#">技术与未来</a>
-          <a href="#">方法</a>
-          <a href="#">自述</a>
-        </nav>
       </header>
 
       <main>
-        <section class="issue-hero" aria-label="issue hero">
-          <div class="issue-copy">
-            <p class="issue-meta">ISSUE 01 · WINTER 2026</p>
-            <h2>The second nature and the good life</h2>
-            <p class="issue-sub">
-              第一自然属于身体与本能；第二自然属于自觉与选择。这里是一份长期思想刊物，记录
-              观念、阅读、现实与写作之间的关系。
-            </p>
-            <a href="#" class="issue-link">Read this issue →</a>
-          </div>
-          <div class="issue-image" aria-hidden="true">
-            <div class="book"></div>
+        <div class="divider"></div>
+
+        <section class="hero-manifesto">
+          <p>第一自然属于身体与本能。</p>
+          <p>第二自然属于自觉与选择。</p>
+          <br />
+          <p>在反复的阅读、思考与沉默之后，</p>
+          <p>人开始形成一种更缓慢、更清醒的存在方式。</p>
+          <br />
+          <p>这里不是表达的舞台，</p>
+          <p>而是秩序生成的地方。</p>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="latest-articles">
+          <h2>最新文章</h2>
+          <div class="article-list">
+            <article class="entry">
+              <h3><a href="#">主体边界与第二自然</a></h3>
+              <div class="meta">2026-02-20 · 观念 · #主体性</div>
+              <p class="summary">主体不是一个固定内核，而是在阅读、关系、制度与技术反馈中持续被重写。</p>
+            </article>
+
+            <article class="entry">
+              <h3><a href="#">阅读不是吸收，而是转译</a></h3>
+              <div class="meta">2026-02-18 · 阅读 · #方法论</div>
+              <p class="summary">真正有效的阅读，不是记住内容，而是形成新的提问方式。</p>
+            </article>
+
+            <article class="entry">
+              <h3><a href="#">长写作作为认知训练</a></h3>
+              <div class="meta">2026-02-15 · 写作 · #结构</div>
+              <p class="summary">长文的价值不在长度，而在论证的完整度与可复盘性。</p>
+            </article>
+
+            <article class="entry">
+              <h3><a href="#">结构先于叙事：现实判断的方法</a></h3>
+              <div class="meta">2026-02-12 · 现实 · #社会结构</div>
+              <p class="summary">判断公共议题时，应先识别约束与激励，再讨论立场。</p>
+            </article>
+
+            <article class="entry">
+              <h3><a href="#">技术时代的自我校正</a></h3>
+              <div class="meta">2026-02-08 · 技术与未来 · #AI与未来</div>
+              <p class="summary">技术提升效率的同时，也在重排人的判断节奏与协作结构。</p>
+            </article>
           </div>
         </section>
 
-        <section class="content-grid" aria-label="articles and special features">
-          <div class="articles">
-            <article class="entry">
-              <p class="entry-kicker">Essay</p>
-              <h3><a href="#">On the liberal imagination</a></h3>
-              <p class="entry-meta"><span>#观念</span><time datetime="2026-02-20">2026-02-20</time></p>
-              <p class="entry-summary">当“自由”被简化为态度表达时，想象力反而失去政治深度。</p>
-            </article>
+        <div class="divider"></div>
 
-            <article class="entry">
-              <p class="entry-kicker">Essay</p>
-              <h3><a href="#">Right and left</a></h3>
-              <p class="entry-meta"><span>#现实</span><time datetime="2026-02-18">2026-02-18</time></p>
-              <p class="entry-summary">真正的分歧不在立场标签，而在对“好生活”结构的理解。</p>
-            </article>
+        <section class="directory-section">
+          <h2>目录</h2>
+          <nav class="directory-nav">
+            <a href="#">观念</a>
+            <a href="#">阅读</a>
+            <a href="#">审美</a>
+            <a href="#">写作</a>
+            <a href="#">现实</a>
+            <a href="#">技术与未来</a>
+            <a href="#">方法</a>
+            <a href="#">自述</a>
+          </nav>
+        </section>
 
-            <article class="entry">
-              <p class="entry-kicker">Reading</p>
-              <h3><a href="#">The art of nostalgia</a></h3>
-              <p class="entry-meta"><span>#阅读</span><time datetime="2026-02-15">2026-02-15</time></p>
-              <p class="entry-summary">怀旧不是倒退，而是对时间秩序的一次重写。</p>
-            </article>
+        <div class="divider"></div>
 
-            <article class="entry">
-              <p class="entry-kicker">Method</p>
-              <h3><a href="#">Beyond equality</a></h3>
-              <p class="entry-meta"><span>#方法</span><time datetime="2026-02-12">2026-02-12</time></p>
-              <p class="entry-summary">平等不是终点，而是进入更复杂伦理结构的起点。</p>
-            </article>
+        <section class="paths-section">
+          <h2>阅读路径</h2>
+          <div class="path-list">
+            <p>第一次来：观念 → 方法 → 自述</p>
+            <p>现实议题：现实 → 技术与未来 → 写作</p>
           </div>
-
-          <aside class="special">
-            <h4>Special Features</h4>
-            <ul>
-              <li>
-                <span class="icon">●</span>
-                <div>
-                  <strong>Forms of Life</strong>
-                  <p>关于生活形式的短论与观察。</p>
-                </div>
-              </li>
-              <li>
-                <span class="icon">◆</span>
-                <div>
-                  <strong>Dialogue</strong>
-                  <p>观点对话与争议命题。</p>
-                </div>
-              </li>
-              <li>
-                <span class="icon">▲</span>
-                <div>
-                  <strong>Survey</strong>
-                  <p>围绕同一问题的多文本汇编。</p>
-                </div>
-              </li>
-            </ul>
-          </aside>
         </section>
 
-        <div class="section-divider" aria-hidden="true"></div>
+        <div class="divider"></div>
 
-        <section class="bottom-grid">
-          <section class="directory" aria-label="section directory">
-            <h2>Directory</h2>
-            <ul>
-              <li><a href="#">观念</a><span>Concept</span></li>
-              <li><a href="#">阅读</a><span>Reading</span></li>
-              <li><a href="#">审美</a><span>Aesthetics</span></li>
-              <li><a href="#">写作</a><span>Writing</span></li>
-              <li><a href="#">现实</a><span>Reality</span></li>
-              <li><a href="#">技术与未来</a><span>Tech & Future</span></li>
-              <li><a href="#">方法</a><span>Method</span></li>
-              <li><a href="#">自述</a><span>Self</span></li>
-            </ul>
-          </section>
-
-          <section class="paths-tags">
-            <div class="reading-paths">
-              <h2>Paths</h2>
-              <p><a href="#">第一次来：观念 → 方法 → 自述</a></p>
-              <p><a href="#">关注现实：现实 → 技术与未来 → 写作</a></p>
-            </div>
-
-            <div class="common-tags">
-              <h2>Tags</h2>
-              <div class="tag-list">
-                <a href="#">#主体性</a>
-                <a href="#">#现代性</a>
-                <a href="#">#方法论</a>
-                <a href="#">#技术伦理</a>
-                <a href="#">#社会结构</a>
-              </div>
-            </div>
-          </section>
+        <section class="tags-section">
+          <h2>常用标签</h2>
+          <div class="tag-cloud">
+            <span>#主体性</span>
+            <span>#现代性</span>
+            <span>#结构</span>
+            <span>#方法</span>
+            <span>#技术伦理</span>
+            <span>#社会结构</span>
+          </div>
         </section>
+
+        <div class="divider"></div>
       </main>
+
+      <footer class="site-footer">
+        <p>© 2026 第二自然</p>
+      </footer>
     </div>
   </body>
 </html>

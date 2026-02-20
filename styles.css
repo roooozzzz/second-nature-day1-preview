@@ -1,423 +1,173 @@
 :root {
   --bg: #ffffff;
-  --black: #111111;
-  --gray-1: #f4f5f5;
-  --gray-2: #e6e9e8;
-  --gray-3: #6f767b;
-  --line: #d9dfdc;
-  --ink: #6b8881;
+  --text: #111111;
+  --meta: #737373;
+  --line: #e5e5e5;
+  --accent: #5b7a73; /* 延续之前的墨绿色，但只做点缀 */
 }
 
 * {
   box-sizing: border-box;
 }
 
-html,
 body {
   margin: 0;
   padding: 0;
   background: var(--bg);
-  color: var(--black);
-}
-
-body {
+  color: var(--text);
   font-family: "Source Han Serif SC", "Noto Serif SC", serif;
-  line-height: 1.9;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
 }
 
 .container {
-  width: min(1180px, 92vw);
+  max-width: 720px; /* 收窄宽度，更像阅读空间 */
   margin: 0 auto;
-  padding: 44px 0 88px;
+  padding: 60px 24px 100px;
 }
 
-a {
-  color: var(--black);
-  text-decoration: none;
-  text-underline-offset: 0.22em;
-  transition: color 0.2s ease, text-decoration-color 0.2s ease;
-}
-
-a:hover {
-  color: var(--ink);
-  text-decoration: underline;
-  text-decoration-color: var(--ink);
-}
-
+/* Header */
 .site-header {
-  margin-bottom: 44px;
-}
-
-.utility-nav {
-  display: flex;
-  justify-content: flex-end;
-  gap: 16px;
-  font-size: 13px;
-  margin-bottom: 14px;
-}
-
-.utility-nav a {
-  color: #7b8287;
-  letter-spacing: 0.03em;
-}
-
-.masthead {
-  text-align: left;
-  margin-bottom: 14px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .masthead h1 {
   margin: 0;
-  font-size: 41px;
-  line-height: 1.15;
+  font-size: 36px;
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.05em;
+  color: var(--text);
 }
 
 .brand-en {
-  margin: 8px 0 0;
-  font-family: "EB Garamond", Georgia, serif;
-  font-size: 18px;
-  color: #757c81;
-  letter-spacing: 0.07em;
-}
-
-.main-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 7px 20px;
-  font-size: 14px;
-  padding: 12px 0 10px;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-.main-nav a {
-  color: #6d757a;
-}
-
-main {
-  display: grid;
-  gap: 30px;
-}
-
-.issue-hero {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 16px;
-}
-
-.issue-copy {
-  background: var(--black);
-  color: #f5f6f6;
-  padding: 34px 34px 36px;
-}
-
-.issue-meta {
-  margin: 0;
-  font-family: "EB Garamond", Georgia, serif;
-  font-size: 12px;
-  letter-spacing: 0.1em;
-  color: #a6b0b5;
-  text-transform: uppercase;
-}
-
-.issue-copy h2 {
-  margin: 12px 0 0;
-  font-family: "EB Garamond", Georgia, serif;
-  font-size: 39px;
-  line-height: 1.2;
-  font-weight: 500;
-  color: #ffffff;
-}
-
-.issue-sub {
-  margin: 16px 0 0;
+  margin: 6px 0 0;
+  font-family: "EB Garamond", serif;
   font-size: 16px;
-  color: #cfd5d8;
-  line-height: 1.86;
+  color: var(--meta);
+  letter-spacing: 0.05em;
 }
 
-.issue-link {
-  display: inline-block;
-  margin-top: 14px;
-  color: #d9dddf;
-}
-
-.issue-image {
-  background: var(--gray-1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 290px;
-}
-
-.book {
-  width: 72%;
-  height: 72%;
-  background: linear-gradient(135deg, #f7f7f7 0%, #e1e3e2 55%, #c9cecb 100%);
-  border: 1px solid #d2d6d4;
-  position: relative;
-}
-
-.book::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: 1px;
-  height: 100%;
-  background: #d1d6d3;
-}
-
-.content-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 16px;
-}
-
-.articles {
-  background: var(--gray-1);
-  padding: 26px 28px 30px;
-}
-
-.entry + .entry {
-  margin-top: 22px;
-  padding-top: 18px;
-  border-top: 1px solid var(--gray-2);
-}
-
-.entry-kicker {
-  margin: 0;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #8f989d;
-}
-
-.entry h3 {
-  margin: 4px 0 0;
-  font-family: "EB Garamond", Georgia, serif;
-  font-size: 34px;
-  line-height: 1.15;
-  font-weight: 500;
-}
-
-.entry-meta {
-  margin: 8px 0 0;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.entry-meta span {
-  border: 1px solid var(--ink);
-  color: var(--ink);
-  border-radius: 999px;
-  font-size: 12px;
-  line-height: 1.6;
-  padding: 0 8px;
-}
-
-.entry-meta time {
-  color: #9aa3a8;
-  font-size: 13px;
-}
-
-.entry-summary {
-  margin: 8px 0 0;
-  font-size: 16px;
-  line-height: 1.86;
-  color: var(--gray-3);
-}
-
-.special {
-  background: var(--gray-1);
-  padding: 26px 24px;
-}
-
-.special h4 {
-  margin: 0 0 16px;
-  font-size: 12px;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #869095;
-}
-
-.special ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  gap: 16px;
-}
-
-.special li {
-  display: grid;
-  grid-template-columns: 20px 1fr;
-  gap: 10px;
-}
-
-.icon {
-  color: var(--ink);
-  font-size: 12px;
-  line-height: 1.4;
-  padding-top: 3px;
-}
-
-.special strong {
-  display: block;
-  font-family: "EB Garamond", Georgia, serif;
-  font-size: 24px;
-  line-height: 1.15;
-  font-weight: 500;
-}
-
-.special p {
-  margin: 4px 0 0;
-  color: #6f787d;
-  font-size: 15px;
-  line-height: 1.8;
-}
-
-@media (max-width: 980px) {
-  .container {
-    width: min(760px, 92vw);
-    padding-top: 30px;
-  }
-
-  .issue-hero,
-  .content-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .issue-copy h2 {
-    font-size: 33px;
-  }
-}
-
-@media (max-width: 560px) {
-  .masthead h1 {
-    font-size: 35px;
-  }
-
-  .brand-en {
-    font-size: 16px;
-  }
-
-  .main-nav {
-    justify-content: flex-start;
-  }
-
-  .issue-copy,
-  .articles,
-  .special {
-    padding: 20px;
-  }
-
-  .entry h3 {
-    font-size: 29px;
-  }
-}
-
-.section-divider {
+/* Divider */
+.divider {
   height: 1px;
-  background: var(--line);
+  background-color: var(--line);
   margin: 40px 0;
   border: none;
 }
 
-.bottom-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 30px;
-  padding-top: 10px;
+/* Hero / Manifesto */
+.hero-manifesto {
+  text-align: center;
+  padding: 20px 0;
 }
 
-.directory h2,
-.reading-paths h2,
-.common-tags h2 {
-  font-family: "EB Garamond", Georgia, serif;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #8f989d;
-  margin: 0 0 18px;
-  font-weight: 500;
-}
-
-.directory ul {
+.hero-manifesto p {
   margin: 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 20px;
+  font-size: 18px;
+  line-height: 2;
+  color: #333;
 }
 
-.directory li {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--line);
-  padding-bottom: 8px;
-  align-items: baseline;
+/* Section Headings */
+h2 {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--meta);
+  margin: 0 0 24px;
+  letter-spacing: 0.1em;
 }
 
-.directory a {
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.directory span {
-  font-family: "EB Garamond", Georgia, serif;
-  font-style: italic;
-  color: #9aa3a8;
-  font-size: 15px;
-}
-
-.paths-tags {
+/* Article List */
+.article-list {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  background: var(--gray-1);
-  padding: 26px 28px;
+  gap: 36px;
 }
 
-.reading-paths p {
-  margin: 0 0 10px;
+.entry h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.entry h3 a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.entry h3 a:hover {
+  color: var(--accent);
+}
+
+.entry .meta {
+  font-size: 13px;
+  color: var(--meta);
+  margin-bottom: 10px;
+  font-family: system-ui, sans-serif; /* Meta信息用无衬线更清晰 */
+}
+
+.entry .summary {
+  margin: 0;
   font-size: 15px;
-  color: var(--gray-3);
+  color: #555;
+  line-height: 1.7;
 }
 
-.reading-paths a {
-  border-bottom: 1px solid var(--line);
-}
-
-.tag-list {
+/* Directory */
+.directory-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 16px 24px;
 }
 
-.tag-list a {
-  font-size: 13px;
-  color: var(--ink);
-  border: 1px solid var(--line);
-  padding: 4px 10px;
-  border-radius: 4px;
-  transition: all 0.2s;
-}
-
-.tag-list a:hover {
-  border-color: var(--ink);
-  background: #fff;
+.directory-nav a {
+  color: var(--text);
   text-decoration: none;
+  font-size: 16px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
 }
 
-@media (max-width: 980px) {
-  .bottom-grid {
-    grid-template-columns: 1fr;
+.directory-nav a:hover {
+  border-bottom-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Paths */
+.path-list p {
+  margin: 0 0 10px;
+  font-size: 15px;
+  color: #333;
+}
+
+/* Tags */
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tag-cloud span {
+  font-size: 14px;
+  color: var(--meta);
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  font-size: 12px;
+  color: var(--meta);
+  margin-top: 60px;
+}
+
+@media (max-width: 600px) {
+  .masthead h1 {
+    font-size: 32px;
+  }
+  .hero-manifesto p {
+    font-size: 16px;
   }
 }
