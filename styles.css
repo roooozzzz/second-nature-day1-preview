@@ -1,11 +1,11 @@
 :root {
-  --bg: #f7f6f2;
-  --text: #1f2221;
-  --muted: #4e5855;
-  --line: #d9ddd7;
+  --bg: #ffffff;
+  --text: #121212;
+  --muted: #6b6f72;
+  --line: #c5d3cf;
   --accent: #1f3a34;
-  --accent-soft: #e8efec;
-  --card-bg: #fbfaf7;
+  --accent-soft: #edf2f0;
+  --card-bg: #ffffff;
 }
 
 * {
