@@ -89,7 +89,7 @@ main {
 
 .hero-panels {
   display: grid;
-  grid-template-columns: 1.35fr 0.9fr;
+  grid-template-columns: 1.6fr 0.75fr;
   gap: 20px;
 }
 
