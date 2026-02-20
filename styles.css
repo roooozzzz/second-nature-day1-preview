@@ -3,9 +3,9 @@
   --surface: #fafaf9;
   --text: #121212;
   --muted: #6b6f72;
-  --deep: #4c5256;
-  --faint: #8a8f93;
-  --line: #d9dddb;
+  --deep: #4f565b;
+  --faint: #9aa1a6;
+  --line: #e7ebe9;
   --accent: #1f3a34;
   --accent-hover: #18332e;
 }
@@ -50,8 +50,8 @@ body {
   margin: 0;
   font-size: 39px;
   line-height: 1.15;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-weight: 500;
+  letter-spacing: 0.03em;
 }
 
 .brand-en {
@@ -112,15 +112,25 @@ main {
   grid-template-columns: 1.45fr 0.92fr;
   gap: 58px;
   align-items: start;
-  padding: 18px 0 26px;
+  padding: 34px 0 42px;
 }
 
 .manifesto {
-  margin: 0;
-  white-space: pre-line;
   font-size: 24px;
   line-height: 1.95;
   font-weight: 500;
+}
+
+.manifesto p {
+  margin: 0;
+}
+
+.manifesto p + p {
+  margin-top: 24px;
+}
+
+.manifesto .manifesto-final {
+  margin-top: 40px;
 }
 
 .hero-note {
@@ -141,7 +151,7 @@ h2 {
   margin: 0;
   font-size: 16px;
   line-height: 1.9;
-  color: var(--deep);
+  color: #656c71;
 }
 
 .hero-note blockquote,
@@ -149,8 +159,8 @@ h2 {
   margin: 14px 0 0;
   padding-left: 14px;
   border-left: 2px solid var(--accent);
-  color: var(--deep);
-  font-size: 16px;
+  color: #6f767b;
+  font-size: 15px;
 }
 
 .section-divider {
@@ -162,20 +172,30 @@ h2 {
 
 .section-kicker {
   margin: 0 0 12px;
-  font-size: 12px;
-  color: var(--muted);
-  letter-spacing: 0.08em;
+  font-size: 11px;
+  color: #9aa1a6;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .featured h2 {
   margin: 0;
-  padding-left: 12px;
-  border-left: 2px solid var(--accent);
+  padding-left: 16px;
+  position: relative;
   font-size: 30px;
   line-height: 1.35;
   color: var(--text);
   font-weight: 600;
+}
+
+.featured h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.18em;
+  width: 2px;
+  height: 1.05em;
+  background: var(--accent);
 }
 
 .featured h2 a {
@@ -235,16 +255,16 @@ time {
 }
 
 .latest-item {
-  padding: 16px 0;
-  border-bottom: 1px solid var(--line);
+  padding: 20px 0 0;
+  border-bottom: none;
 }
 
 .latest-item:first-of-type {
-  padding-top: 8px;
+  padding-top: 10px;
 }
 
-.latest-item:last-of-type {
-  border-bottom: none;
+.latest-item + .latest-item {
+  margin-top: 8px;
 }
 
 .latest-item h3 {
@@ -255,12 +275,12 @@ time {
 }
 
 .latest-item h3 a {
-  color: var(--text);
+  color: #101010;
 }
 
 .latest-summary {
   margin: 8px 0 0;
-  color: #5a6064;
+  color: #666e73;
   font-size: 16px;
   line-height: 1.88;
 }
