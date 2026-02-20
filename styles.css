@@ -3,7 +3,8 @@
   --text: #111111;
   --meta: #737373;
   --line: #e5e5e5;
-  --accent: #5b7a73; /* 延续之前的墨绿色，但只做点缀 */
+  --accent: #6b8881; /* Restored "The Point" green */
+  --gray-bg: #f9f9f9;
 }
 
 * {
@@ -21,42 +22,43 @@ body {
 }
 
 .container {
-  max-width: 720px; /* 收窄宽度，更像阅读空间 */
+  max-width: 760px; /* Kept narrow for thought space feel */
   margin: 0 auto;
   padding: 60px 24px 100px;
 }
 
-/* Header */
+/* Header - "The Point" style centered but minimal */
 .site-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .masthead h1 {
   margin: 0;
-  font-size: 36px;
+  font-size: 42px; /* Restored larger size */
   font-weight: 500;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   color: var(--text);
+  font-family: "Source Han Serif SC", serif;
 }
 
 .brand-en {
-  margin: 6px 0 0;
+  margin: 8px 0 0;
   font-family: "EB Garamond", serif;
-  font-size: 16px;
+  font-size: 18px;
   color: var(--meta);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
 }
 
-/* Divider */
+/* Divider - specific thin line */
 .divider {
   height: 1px;
   background-color: var(--line);
-  margin: 40px 0;
+  margin: 50px 0;
   border: none;
 }
 
-/* Hero / Manifesto */
+/* Hero / Manifesto - Typography focus */
 .hero-manifesto {
   text-align: center;
   padding: 20px 0;
@@ -64,32 +66,41 @@ body {
 
 .hero-manifesto p {
   margin: 0;
-  font-size: 18px;
-  line-height: 2;
-  color: #333;
+  font-size: 20px; /* Slightly larger for hero feel */
+  line-height: 2.2;
+  color: #222;
+  font-weight: 500;
 }
 
-/* Section Headings */
+/* Section Headings - "The Point" kicker style */
 h2 {
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--meta);
-  margin: 0 0 24px;
-  letter-spacing: 0.1em;
+  font-family: "EB Garamond", serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #999; /* Lighter kicker color */
+  margin: 0 0 30px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-align: center; /* Center section headers like specific editorial styles */
 }
 
-/* Article List */
+/* Article List - Restored spacing and elegance */
 .article-list {
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 48px; /* More breathing room */
+}
+
+.entry {
+  text-align: center; /* Centered articles for "thought space" feel */
 }
 
 .entry h3 {
-  margin: 0 0 8px;
-  font-size: 20px;
+  margin: 0 0 10px;
+  font-size: 24px;
   font-weight: 500;
   line-height: 1.4;
+  font-family: "Source Han Serif SC", serif;
 }
 
 .entry h3 a {
@@ -103,71 +114,85 @@ h2 {
 }
 
 .entry .meta {
-  font-size: 13px;
+  font-family: "EB Garamond", serif; /* Serif for meta */
+  font-size: 15px;
   color: var(--meta);
-  margin-bottom: 10px;
-  font-family: system-ui, sans-serif; /* Meta信息用无衬线更清晰 */
+  margin-bottom: 12px;
+  font-style: italic;
 }
 
 .entry .summary {
-  margin: 0;
-  font-size: 15px;
+  margin: 0 auto;
+  font-size: 16px;
   color: #555;
-  line-height: 1.7;
+  line-height: 1.8;
+  max-width: 600px;
 }
 
-/* Directory */
+/* Directory - Minimal list */
 .directory-nav {
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px 24px;
+  flex-direction: column; /* List style as requested in ASCII */
+  align-items: center;
+  gap: 16px;
 }
 
 .directory-nav a {
   color: var(--text);
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
   border-bottom: 1px solid transparent;
-  transition: border-color 0.2s;
+  transition: color 0.2s;
+  font-weight: 500;
 }
 
 .directory-nav a:hover {
-  border-bottom-color: var(--accent);
   color: var(--accent);
 }
 
 /* Paths */
+.path-list {
+  text-align: center;
+}
+
 .path-list p {
-  margin: 0 0 10px;
-  font-size: 15px;
-  color: #333;
+  margin: 0 0 14px;
+  font-size: 16px;
+  color: #444;
 }
 
 /* Tags */
 .tag-cloud {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  justify-content: center;
+  gap: 16px;
 }
 
 .tag-cloud span {
-  font-size: 14px;
-  color: var(--meta);
+  font-family: "EB Garamond", serif;
+  font-size: 16px;
+  color: var(--accent); /* Accent color for tags */
+  font-style: italic;
 }
 
 /* Footer */
 .site-footer {
   text-align: center;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--meta);
-  margin-top: 60px;
+  margin-top: 80px;
+  font-family: "EB Garamond", serif;
 }
 
 @media (max-width: 600px) {
   .masthead h1 {
-    font-size: 32px;
+    font-size: 34px;
   }
   .hero-manifesto p {
-    font-size: 16px;
+    font-size: 18px;
+  }
+  .entry h3 {
+    font-size: 22px;
   }
 }
