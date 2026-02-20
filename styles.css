@@ -5,8 +5,7 @@
   --gray-2: #e6e9e8;
   --gray-3: #6f767b;
   --line: #d9dfdc;
-  --ink: #1f3a34;
-  --ink-soft: #e8f0ed;
+  --ink: #3a6963;
 }
 
 * {
@@ -143,11 +142,11 @@ main {
 .issue-link {
   display: inline-block;
   margin-top: 14px;
-  color: #d8e4df;
+  color: #d9dddf;
 }
 
 .issue-image {
-  background: var(--ink-soft);
+  background: var(--gray-1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,8 +156,8 @@ main {
 .book {
   width: 72%;
   height: 72%;
-  background: linear-gradient(135deg, #f5f7f6 0%, #d8dfdc 55%, #bdc9c3 100%);
-  border: 1px solid #c5d0cb;
+  background: linear-gradient(135deg, #f7f7f7 0%, #e1e3e2 55%, #c9cecb 100%);
+  border: 1px solid #d2d6d4;
   position: relative;
 }
 
@@ -169,7 +168,7 @@ main {
   top: 0;
   width: 1px;
   height: 100%;
-  background: #c3ccc8;
+  background: #d1d6d3;
 }
 
 .content-grid {
@@ -234,7 +233,7 @@ main {
 }
 
 .special {
-  background: var(--ink-soft);
+  background: var(--gray-1);
   padding: 26px 24px;
 }
 
