@@ -50,6 +50,40 @@ body {
   letter-spacing: 0.08em;
 }
 
+/* 思想索引导航 */
+.index-nav {
+  margin-top: 22px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+}
+
+.index-nav .nav-left,
+.index-nav .nav-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.index-nav a {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #6f7376;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+}
+
+.index-nav a:hover {
+  color: #6f7376;
+  border-bottom-color: #3f4346;
+}
+
 /* Divider - specific thin line */
 .divider {
   height: 1px;
@@ -209,9 +243,22 @@ h2 {
   .masthead h1 {
     font-size: 34px;
   }
+
+  .index-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .index-nav .nav-left,
+  .index-nav .nav-right {
+    gap: 14px;
+  }
+
   .hero-manifesto p {
     font-size: 18px;
   }
+
   .entry h3 {
     font-size: 22px;
   }
