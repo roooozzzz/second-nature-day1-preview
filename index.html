@@ -9,17 +9,14 @@
   <body>
     <div class="container">
       <header class="site-header">
-        <div class="header-top">
-          <div class="brand">
-            <!-- TODO: 可替换站点名（中文） -->
-            <h1>第二自然</h1>
-            <!-- TODO: 可替换英文副标题 -->
-            <p class="brand-en">The Second Nature</p>
-          </div>
-          <nav class="meta-nav" aria-label="secondary navigation">
-            <a href="#">About</a>
-            <a href="#">Archive</a>
-          </nav>
+        <div class="utility-nav">
+          <a href="#">About</a>
+          <a href="#">Archive</a>
+        </div>
+
+        <div class="masthead">
+          <h1>第二自然</h1>
+          <p class="brand-en">The Second Nature</p>
         </div>
 
         <nav class="main-nav" aria-label="main navigation">
@@ -35,119 +32,88 @@
       </header>
 
       <main>
-        <section class="hero" aria-label="hero">
-          <div class="hero-main">
-            <!-- TODO: 可替换主宣言正文（按你的版本三文本） -->
-            <div class="manifesto">
-              <p>第一自然属于身体与本能。<br />第二自然属于自觉与选择。</p>
-              <p>在反复的阅读、思考与沉默之后，<br />人开始形成一种更缓慢、更清醒的存在方式。</p>
-              <p class="manifesto-final">这里不是表达的舞台，<br />而是秩序生成的地方。</p>
-            </div>
+        <section class="intro" aria-label="opening statement">
+          <p class="issue">ISSUE 01 · SPRING 2026</p>
+          <div class="manifesto">
+            <p>第一自然属于身体与本能。第二自然属于自觉与选择。</p>
+            <p>在反复的阅读、思考与沉默之后，人开始形成一种更缓慢、更清醒的存在方式。</p>
+            <p>这里不是表达的舞台，而是秩序生成的地方。</p>
           </div>
-
-          <aside class="hero-note" aria-label="editor note">
-            <h2>Editor's Note</h2>
-            <!-- TODO: 可替换侧注说明 -->
-            <p>这是一个给少数同频者的长期写作空间。它不追热点，不追高频，只把思考沉淀成可回看的秩序。</p>
-            <!-- TODO: 可替换引用 -->
-            <blockquote>写作不是表达冲动，而是对认知秩序的缓慢校正。</blockquote>
-          </aside>
         </section>
 
-        <div class="section-divider" aria-hidden="true"></div>
+        <section class="lead-grid" aria-label="featured and latest">
+          <article class="featured">
+            <h2>Featured</h2>
+            <h3><a href="#">主体边界与第二自然</a></h3>
+            <p class="meta-row">
+              <span class="tag">#主体性</span>
+              <time datetime="2026-02-20">2026-02-20</time>
+            </p>
+            <p class="summary">主体不是一个固定内核，而是在阅读、关系、制度与技术反馈中持续被重写。所谓“第二自然”，是人在长期训练中形成的自觉结构与判断能力。</p>
+            <a class="read-more" href="#">阅读全文 →</a>
+          </article>
 
-        <section class="featured" aria-label="featured article">
-          <p class="section-kicker">ISSUE 01 · FEB 2026</p>
-          <!-- TODO: 可替换置顶文章标题 -->
-          <h2><a href="#">主体边界与第二自然</a></h2>
-          <p class="meta-row">
-            <span class="tag">#主体性</span>
-            <time datetime="2026-02-20">2026-02-20</time>
-          </p>
-          <!-- TODO: 可替换置顶文章摘要 -->
-          <p class="featured-summary">主体不是一个固定内核，而是在阅读、关系、制度与技术反馈中持续被重写。所谓“第二自然”，是人在长期训练中形成的自觉结构与判断能力。</p>
-          <a class="read-more" href="#">阅读全文 →</a>
-        </section>
-
-        <section class="latest-layout" aria-label="latest articles and side note">
-          <div class="latest-main">
+          <aside class="latest">
             <h2>Latest</h2>
-
-            <article class="latest-item">
-              <h3><a href="#">阅读不是吸收，而是转译</a></h3>
-              <p class="meta-row"><span class="tag">#阅读方法</span><time datetime="2026-02-18">2026-02-18</time></p>
-              <p class="latest-summary">真正有效的阅读，不是记住内容，而是形成新的提问方式。</p>
-            </article>
-
-            <article class="latest-item">
-              <h3><a href="#">长写作作为认知训练</a></h3>
-              <p class="meta-row"><span class="tag">#写作</span><time datetime="2026-02-15">2026-02-15</time></p>
-              <p class="latest-summary">长文的价值不在长度，而在论证的完整度与可复盘性。</p>
-            </article>
-
-            <article class="latest-item">
-              <h3><a href="#">结构先于叙事：现实判断的方法</a></h3>
-              <p class="meta-row"><span class="tag">#社会结构</span><time datetime="2026-02-12">2026-02-12</time></p>
-              <p class="latest-summary">判断公共议题时，应先识别约束与激励，再讨论立场。</p>
-            </article>
-
-            <article class="latest-item">
-              <h3><a href="#">形式、距离与审美判断</a></h3>
-              <p class="meta-row"><span class="tag">#审美</span><time datetime="2026-02-10">2026-02-10</time></p>
-              <p class="latest-summary">审美首先是区分能力，其次才是偏好表达。</p>
-            </article>
-
-            <article class="latest-item">
-              <h3><a href="#">技术时代的自我校正</a></h3>
-              <p class="meta-row"><span class="tag">#AI与未来</span><time datetime="2026-02-08">2026-02-08</time></p>
-              <p class="latest-summary">技术提升效率的同时，也在重排人的判断节奏与协作结构。</p>
-            </article>
-
-            <article class="latest-item">
-              <h3><a href="#">一个可执行的思考协议</a></h3>
-              <p class="meta-row"><span class="tag">#方法论</span><time datetime="2026-02-05">2026-02-05</time></p>
-              <p class="latest-summary">问题定义—变量拆解—反证校验，让判断过程可重复、可改进。</p>
-            </article>
-          </div>
-
-          <aside class="latest-side">
-            <h2>Editor's Note</h2>
-            <!-- TODO: 可替换侧栏内容 -->
-            <p>最近在读：关于现代性与主体构造的几组文本，重点关注“技术加速”下判断力如何维持。</p>
-            <blockquote>慢不是效率的反义词，慢是为了让思考有形。</blockquote>
+            <ul>
+              <li>
+                <a href="#">阅读不是吸收，而是转译</a>
+                <p><span class="tag">#阅读方法</span><time datetime="2026-02-18">2026-02-18</time></p>
+              </li>
+              <li>
+                <a href="#">长写作作为认知训练</a>
+                <p><span class="tag">#写作</span><time datetime="2026-02-15">2026-02-15</time></p>
+              </li>
+              <li>
+                <a href="#">结构先于叙事：现实判断的方法</a>
+                <p><span class="tag">#社会结构</span><time datetime="2026-02-12">2026-02-12</time></p>
+              </li>
+              <li>
+                <a href="#">形式、距离与审美判断</a>
+                <p><span class="tag">#审美</span><time datetime="2026-02-10">2026-02-10</time></p>
+              </li>
+              <li>
+                <a href="#">技术时代的自我校正</a>
+                <p><span class="tag">#AI与未来</span><time datetime="2026-02-08">2026-02-08</time></p>
+              </li>
+            </ul>
           </aside>
         </section>
 
-        <section class="directory" aria-label="section directory">
-          <h2>栏目目录</h2>
-          <ul>
-            <li><a href="#">观念</a><span>概念澄清与命题推演</span></li>
-            <li><a href="#">阅读</a><span>从文本到问题意识</span></li>
-            <li><a href="#">审美</a><span>作品形式与判断结构</span></li>
-            <li><a href="#">写作</a><span>完整长文与阶段输出</span></li>
-            <li><a href="#">现实</a><span>社会机制与叙事逻辑</span></li>
-            <li><a href="#">技术与未来</a><span>AI对秩序与组织的重塑</span></li>
-            <li><a href="#">方法</a><span>思考、研究、写作方法</span></li>
-            <li><a href="#">自述</a><span>片段、短札与未完成问题</span></li>
-          </ul>
-        </section>
+        <section class="bottom-grid">
+          <section class="directory" aria-label="section directory">
+            <h2>栏目目录</h2>
+            <ul>
+              <li><a href="#">观念</a><span>概念澄清与命题推演</span></li>
+              <li><a href="#">阅读</a><span>从文本到问题意识</span></li>
+              <li><a href="#">审美</a><span>作品形式与判断结构</span></li>
+              <li><a href="#">写作</a><span>完整长文与阶段输出</span></li>
+              <li><a href="#">现实</a><span>社会机制与叙事逻辑</span></li>
+              <li><a href="#">技术与未来</a><span>AI对秩序与组织的重塑</span></li>
+              <li><a href="#">方法</a><span>思考、研究、写作方法</span></li>
+              <li><a href="#">自述</a><span>片段、短札与未完成问题</span></li>
+            </ul>
+          </section>
 
-        <section class="reading-paths" aria-label="reading paths">
-          <h2>阅读路径</h2>
-          <p><a href="#">第一次来：观念 → 方法 → 自述</a></p>
-          <p><a href="#">关注现实：现实 → 技术与未来 → 写作</a></p>
-          <p><a href="#">偏审美：阅读 → 审美 → 写作</a></p>
-        </section>
+          <section class="paths-tags">
+            <section class="reading-paths" aria-label="reading paths">
+              <h2>阅读路径</h2>
+              <p><a href="#">第一次来：观念 → 方法 → 自述</a></p>
+              <p><a href="#">关注现实：现实 → 技术与未来 → 写作</a></p>
+              <p><a href="#">偏审美：阅读 → 审美 → 写作</a></p>
+            </section>
 
-        <section class="common-tags" aria-label="common tags">
-          <h2>常用标签</h2>
-          <div class="tag-list">
-            <a href="#">#主体性</a>
-            <a href="#">#现代性</a>
-            <a href="#">#方法论</a>
-            <a href="#">#技术伦理</a>
-            <a href="#">#社会结构</a>
-          </div>
+            <section class="common-tags" aria-label="common tags">
+              <h2>常用标签</h2>
+              <div class="tag-list">
+                <a href="#">#主体性</a>
+                <a href="#">#现代性</a>
+                <a href="#">#方法论</a>
+                <a href="#">#技术伦理</a>
+                <a href="#">#社会结构</a>
+              </div>
+            </section>
+          </section>
         </section>
       </main>
     </div>
