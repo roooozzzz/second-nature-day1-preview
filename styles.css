@@ -62,7 +62,7 @@ a:hover {
 }
 
 .masthead {
-  text-align: center;
+  text-align: left;
   margin-bottom: 14px;
 }
 
@@ -85,8 +85,8 @@ a:hover {
 .main-nav {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 7px 15px;
+  justify-content: flex-start;
+  gap: 7px 20px;
   font-size: 14px;
   padding: 12px 0 10px;
   border-top: 1px solid var(--line);
