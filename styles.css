@@ -4,6 +4,7 @@
   --text: #121212;
   --muted: #6b6f72;
   --deep: #4c5256;
+  --faint: #8a8f93;
   --line: #d9dddb;
   --accent: #1f3a34;
   --accent-hover: #18332e;
@@ -22,14 +23,16 @@ body {
 }
 
 body {
-  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
-  line-height: 1.86;
+  font-family: "Source Han Serif SC", "Source Han Serif CN", "Noto Serif SC", serif;
+  line-height: 1.9;
 }
 
 .container {
   width: min(1240px, 92vw);
   margin: 0 auto;
-  padding: 40px 0 72px;
+  padding: 48px 0 80px;
+  position: relative;
+  left: -20px;
 }
 
 .site-header {
@@ -45,7 +48,7 @@ body {
 
 .brand h1 {
   margin: 0;
-  font-size: 40px;
+  font-size: 39px;
   line-height: 1.15;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -58,7 +61,7 @@ body {
   color: var(--muted);
   font-family: "EB Garamond", "Georgia", serif;
   font-weight: 400;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
 }
 
 .meta-nav,
@@ -109,13 +112,14 @@ main {
   grid-template-columns: 1.45fr 0.92fr;
   gap: 58px;
   align-items: start;
+  padding: 18px 0 26px;
 }
 
 .manifesto {
   margin: 0;
   white-space: pre-line;
-  font-size: clamp(24px, 2.05vw, 26px);
-  line-height: 1.9;
+  font-size: 24px;
+  line-height: 1.95;
   font-weight: 500;
 }
 
@@ -166,7 +170,9 @@ h2 {
 
 .featured h2 {
   margin: 0;
-  font-size: clamp(30px, 2.5vw, 32px);
+  padding-left: 12px;
+  border-left: 2px solid var(--accent);
+  font-size: 30px;
   line-height: 1.35;
   color: var(--text);
   font-weight: 600;
@@ -198,12 +204,16 @@ time {
   color: var(--muted);
 }
 
+.latest-item time {
+  color: var(--faint);
+}
+
 .featured-summary {
   margin: 12px 0 0;
   max-width: 76ch;
   color: var(--deep);
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.88;
 }
 
 .read-more {
@@ -239,7 +249,7 @@ time {
 
 .latest-item h3 {
   margin: 0;
-  font-size: clamp(20px, 1.7vw, 21px);
+  font-size: 20px;
   line-height: 1.45;
   font-weight: 500;
 }
@@ -250,14 +260,21 @@ time {
 
 .latest-summary {
   margin: 8px 0 0;
-  color: var(--deep);
+  color: #5a6064;
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.88;
 }
 
 .latest-side {
   background: var(--surface);
   padding: 18px 22px;
+}
+
+.directory h2 {
+  color: #8b9093;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
 }
 
 .directory ul {
@@ -270,18 +287,25 @@ time {
   display: flex;
   gap: 12px;
   align-items: baseline;
-  padding: 7px 0;
+  padding: 11px 0;
 }
 
 .directory li a {
   color: var(--text);
   font-size: 19px;
   line-height: 1.5;
+  text-decoration: none;
 }
 
 .directory li span {
   color: var(--deep);
   font-size: 16px;
+}
+
+.directory li a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-hover);
 }
 
 .reading-paths p {
@@ -323,6 +347,7 @@ time {
   .container {
     width: min(740px, 92vw);
     padding-top: 26px;
+    left: 0;
   }
 
   .header-top {
