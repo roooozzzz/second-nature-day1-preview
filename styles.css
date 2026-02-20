@@ -1,10 +1,11 @@
 :root {
   --bg: #ffffff;
   --text: #111111;
-  --meta: #737373;
-  --line: #e5e5e5;
-  --accent: #6b8881; /* Restored "The Point" green */
-  --gray-bg: #f9f9f9;
+  --meta: #6f7376;
+  --line: #d9dfdc;
+  --panel: #f2f3f3;
+  --panel-alt: #ecefee;
+  --accent: #6b8881;
 }
 
 * {
@@ -13,57 +14,48 @@
 
 body {
   margin: 0;
-  padding: 0;
-  background: var(--bg);
+  background: #efefef;
   color: var(--text);
-  font-family: "Source Han Serif SC", "Noto Serif SC", serif;
-  line-height: 1.8;
+  font-family: "Noto Serif SC", "Source Han Serif SC", serif;
   -webkit-font-smoothing: antialiased;
 }
 
 .container {
-  max-width: 760px; /* Kept narrow for thought space feel */
+  width: min(980px, 94vw);
   margin: 0 auto;
-  padding: 60px 24px 100px;
+  background: var(--bg);
+  padding: 42px 52px 70px;
 }
 
-/* Header - "The Point" style centered but minimal */
 .site-header {
-  text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 12px;
 }
 
 .masthead h1 {
   margin: 0;
-  font-size: 42px; /* Restored larger size */
+  font-size: 54px;
+  line-height: 1.1;
   font-weight: 500;
-  letter-spacing: 0.02em;
-  color: var(--text);
-  font-family: "Source Han Serif SC", serif;
+  letter-spacing: 0.03em;
 }
 
 .brand-en {
-  margin: 8px 0 0;
+  margin: 6px 0 0;
   font-family: "EB Garamond", serif;
-  font-size: 18px;
+  font-size: 24px;
   color: var(--meta);
-  letter-spacing: 0.08em;
 }
 
-/* 思想索引导航 */
 .index-nav {
-  margin-top: 22px;
-  padding-top: 14px;
-  border-top: 1px solid var(--line);
+  margin-top: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-  text-align: left;
 }
 
-.index-nav .nav-left,
-.index-nav .nav-right {
+.index-nav .nav-main,
+.index-nav .nav-side {
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
@@ -76,172 +68,196 @@ body {
   color: #6f7376;
   text-decoration: none;
   border-bottom: 1px solid transparent;
-  padding-bottom: 1px;
+  line-height: 1.4;
 }
 
 .index-nav a:hover {
   color: #6f7376;
-  border-bottom-color: #3f4346;
+  border-bottom-color: #474c50;
 }
 
-/* Divider - specific thin line */
 .divider {
-  height: 1px;
-  background-color: var(--line);
-  margin: 50px 0;
   border: none;
+  height: 1px;
+  background: var(--line);
+  margin: 18px 0 22px;
 }
 
-/* Hero / Manifesto - Narrow Left Column */
-.hero-manifesto {
-  text-align: left;
-  padding: 40px 0;
-  max-width: 360px; /* Narrow column on the left */
-  margin-left: 0;
-  margin-right: auto;
+main {
+  display: block;
 }
 
-.hero-manifesto p {
-  margin: 0;
-  font-size: 18px;
-  line-height: 2.1;
-  color: #111;
-  font-weight: 500;
+.hero-panels {
+  display: grid;
+  grid-template-columns: 0.9fr 1.35fr;
+  gap: 20px;
 }
 
-/* Section Headings - "The Point" kicker style - Left aligned */
-h2 {
-  font-family: "EB Garamond", serif;
-  font-size: 15px;
-  font-weight: 500;
-  color: #999; /* Lighter kicker color */
-  margin: 0 0 30px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  text-align: left; /* Reset to left align */
+.hero-block {
+  padding: 28px 26px;
+  min-height: 360px;
 }
 
-/* Article List - First one big */
-.article-list {
+.manifesto-block {
+  background: var(--panel);
+}
+
+.note-block {
+  background: var(--panel-alt);
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  justify-content: center;
+}
+
+.hero-block h2,
+.latest-articles h2,
+.directory-section h2,
+.paths-section h2,
+.tags-section h2 {
+  margin: 0 0 16px;
+  font-size: 20px;
+  font-family: "EB Garamond", serif;
+  font-weight: 500;
+  color: #858d92;
+  letter-spacing: 0.06em;
+}
+
+.manifesto-block p,
+.note-block p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.85;
+}
+
+.manifesto-block .spacer {
+  height: 18px;
+}
+
+.note-block p + p {
+  margin-top: 10px;
+}
+
+.latest-articles {
+  background: var(--panel);
+  padding: 24px 28px;
 }
 
 .entry {
-  text-align: left; /* Reset to left align */
-  max-width: 680px; /* Reading width */
+  padding-top: 16px;
+  border-top: 1px solid #dce2e0;
 }
 
-/* Featured Styling for the first article */
-.article-list .entry:first-child {
-  margin-bottom: 20px;
+.entry:first-of-type {
+  border-top: none;
+  padding-top: 0;
 }
 
-.article-list .entry:first-child h3 {
-  font-size: 32px; /* Bigger title */
-  margin-bottom: 12px;
-}
-
-.article-list .entry:first-child .summary {
-  font-size: 18px; /* Bigger summary */
-  color: #333;
-}
-
-/* Standard Articles (subsequent) */
 .entry h3 {
-  margin: 0 0 8px;
-  font-size: 20px; /* Smaller title */
+  margin: 0;
+  line-height: 1.25;
   font-weight: 500;
-  line-height: 1.4;
-  font-family: "Source Han Serif SC", serif;
 }
 
 .entry h3 a {
   color: var(--text);
   text-decoration: none;
-  transition: color 0.2s;
 }
 
 .entry h3 a:hover {
-  color: var(--accent);
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: #474c50;
 }
 
 .entry .meta {
-  font-family: "EB Garamond", serif; /* Serif for meta */
-  font-size: 15px;
+  margin-top: 6px;
+  font-size: 13px;
   color: var(--meta);
-  margin-bottom: 12px;
-  font-style: italic;
 }
 
 .entry .summary {
-  margin: 0 auto;
-  font-size: 16px;
-  color: #555;
-  line-height: 1.8;
-  max-width: 600px;
+  margin: 8px 0 0;
+  color: #4f585d;
 }
 
-/* Directory - Minimal list */
+.entry.feature h3 {
+  font-size: 58px;
+  font-family: "EB Garamond", serif;
+}
+
+.entry.feature .summary {
+  font-size: 18px;
+  line-height: 1.72;
+}
+
+.entry.secondary h3 {
+  font-size: 42px;
+  font-family: "EB Garamond", serif;
+}
+
+.entry.secondary .summary {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.entry.small h3 {
+  font-size: 28px;
+  font-family: "EB Garamond", serif;
+}
+
+.entry.small .summary {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.directory-section,
+.paths-section,
+.tags-section {
+  background: var(--panel);
+  padding: 22px 24px;
+}
+
 .directory-nav {
-  display: flex;
-  flex-direction: column; /* List style as requested in ASCII */
-  align-items: flex-start;
-  gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px 22px;
 }
 
 .directory-nav a {
+  font-size: 22px;
   color: var(--text);
   text-decoration: none;
+}
+
+.paths-section p {
+  margin: 8px 0 0;
   font-size: 18px;
-  border-bottom: 1px solid transparent;
-  transition: color 0.2s;
-  font-weight: 500;
 }
 
-.directory-nav a:hover {
-  color: var(--accent);
-}
-
-/* Paths */
-.path-list {
-  text-align: left;
-}
-
-.path-list p {
-  margin: 0 0 14px;
-  font-size: 16px;
-  color: #444;
-}
-
-/* Tags */
 .tag-cloud {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 16px;
+  gap: 14px;
 }
 
 .tag-cloud span {
+  font-size: 18px;
+  color: var(--accent);
   font-family: "EB Garamond", serif;
-  font-size: 16px;
-  color: var(--accent); /* Accent color for tags */
   font-style: italic;
 }
 
-/* Footer */
-.site-footer {
-  text-align: left;
-  font-size: 13px;
-  color: var(--meta);
-  margin-top: 80px;
-  font-family: "EB Garamond", serif;
-}
+@media (max-width: 880px) {
+  .container {
+    padding: 30px 20px 50px;
+  }
 
-@media (max-width: 600px) {
   .masthead h1 {
-    font-size: 34px;
+    font-size: 40px;
+  }
+
+  .brand-en {
+    font-size: 18px;
   }
 
   .index-nav {
@@ -250,16 +266,27 @@ h2 {
     gap: 10px;
   }
 
-  .index-nav .nav-left,
-  .index-nav .nav-right {
-    gap: 14px;
+  .hero-panels {
+    grid-template-columns: 1fr;
   }
 
-  .hero-manifesto p {
-    font-size: 18px;
+  .hero-block {
+    min-height: auto;
   }
 
-  .entry h3 {
-    font-size: 22px;
+  .entry.feature h3 {
+    font-size: 42px;
+  }
+
+  .entry.secondary h3 {
+    font-size: 32px;
+  }
+
+  .entry.small h3 {
+    font-size: 24px;
+  }
+
+  .directory-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

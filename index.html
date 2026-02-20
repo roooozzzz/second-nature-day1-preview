@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Noto+Serif+SC:wght@400;500;600&family=Source+Han+Serif+SC:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Noto+Serif+SC:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
@@ -20,14 +20,14 @@
           <p class="brand-en">The Second Nature</p>
         </div>
 
-        <nav class="index-nav" aria-label="思想索引导航">
-          <div class="nav-left">
+        <nav class="index-nav" aria-label="思想索引">
+          <div class="nav-main">
             <a href="#">结构意识</a>
             <a href="#">主体问题</a>
             <a href="#">方法论</a>
             <a href="#">现实观察</a>
           </div>
-          <div class="nav-right">
+          <div class="nav-side">
             <a href="#">目录</a>
             <a href="#">关于</a>
             <a href="#">归档</a>
@@ -35,61 +35,69 @@
         </nav>
       </header>
 
-      <main>
-        <div class="divider"></div>
+      <div class="divider"></div>
 
-        <section class="hero-manifesto">
-          <p>第一自然属于身体与本能。</p>
-          <p>第二自然属于自觉与选择。</p>
-          <br />
-          <p>在反复的阅读、思考与沉默之后，</p>
-          <p>人开始形成一种更缓慢、更清醒的存在方式。</p>
-          <br />
-          <p>这里不是表达的舞台，</p>
-          <p>而是秩序生成的地方。</p>
+      <main>
+        <section class="hero-panels">
+          <article class="hero-block manifesto-block">
+            <h2>首页宣言</h2>
+            <p>第一自然属于身体与本能。</p>
+            <p>第二自然属于自觉与选择。</p>
+            <p class="spacer"></p>
+            <p>在反复的阅读、思考与沉默之后，</p>
+            <p>人开始形成一种更缓慢、更清醒的存在方式。</p>
+            <p class="spacer"></p>
+            <p>这里不是表达的舞台，</p>
+            <p>而是秩序生成的地方。</p>
+          </article>
+
+          <aside class="hero-block note-block">
+            <h2>站点说明</h2>
+            <p>这是一个给少数同频者的长期写作空间。</p>
+            <p>不追热点，不追高频。</p>
+            <p>把思考沉淀成可回看的秩序。</p>
+          </aside>
         </section>
 
         <div class="divider"></div>
 
         <section class="latest-articles">
-          <h2>最新文章</h2>
-          <div class="article-list">
-            <article class="entry">
-              <h3><a href="#">主体边界与第二自然</a></h3>
-              <div class="meta">2026-02-20 · 观念 · #主体性</div>
-              <p class="summary">主体不是一个固定内核，而是在阅读、关系、制度与技术反馈中持续被重写。</p>
-            </article>
+          <h2>最新</h2>
+          <article class="entry feature">
+            <h3><a href="#">主体边界与第二自然</a></h3>
+            <div class="meta">2026-02-20 · 观念 · #主体性</div>
+            <p class="summary">主体不是一个固定内核，而是在阅读、关系、制度与技术反馈中持续被重写。</p>
+          </article>
 
-            <article class="entry">
-              <h3><a href="#">阅读不是吸收，而是转译</a></h3>
-              <div class="meta">2026-02-18 · 阅读 · #方法论</div>
-              <p class="summary">真正有效的阅读，不是记住内容，而是形成新的提问方式。</p>
-            </article>
+          <article class="entry secondary">
+            <h3><a href="#">阅读不是吸收，而是转译</a></h3>
+            <div class="meta">2026-02-18 · 阅读 · #方法论</div>
+            <p class="summary">真正有效的阅读，不是记住内容，而是形成新的提问方式。</p>
+          </article>
 
-            <article class="entry">
-              <h3><a href="#">长写作作为认知训练</a></h3>
-              <div class="meta">2026-02-15 · 写作 · #结构</div>
-              <p class="summary">长文的价值不在长度，而在论证的完整度与可复盘性。</p>
-            </article>
+          <article class="entry small">
+            <h3><a href="#">长写作作为认知训练</a></h3>
+            <div class="meta">2026-02-15 · 写作 · #结构</div>
+            <p class="summary">长文的价值不在长度，而在论证完整度与可复盘性。</p>
+          </article>
 
-            <article class="entry">
-              <h3><a href="#">结构先于叙事：现实判断的方法</a></h3>
-              <div class="meta">2026-02-12 · 现实 · #社会结构</div>
-              <p class="summary">判断公共议题时，应先识别约束与激励，再讨论立场。</p>
-            </article>
+          <article class="entry small">
+            <h3><a href="#">结构先于叙事：现实判断的方法</a></h3>
+            <div class="meta">2026-02-12 · 现实 · #社会结构</div>
+            <p class="summary">判断公共议题时，应先识别约束与激励，再讨论立场。</p>
+          </article>
 
-            <article class="entry">
-              <h3><a href="#">技术时代的自我校正</a></h3>
-              <div class="meta">2026-02-08 · 技术与未来 · #AI与未来</div>
-              <p class="summary">技术提升效率的同时，也在重排人的判断节奏与协作结构。</p>
-            </article>
-          </div>
+          <article class="entry small">
+            <h3><a href="#">技术时代的自我校正</a></h3>
+            <div class="meta">2026-02-08 · 技术与未来 · #AI与未来</div>
+            <p class="summary">技术提升效率的同时，也在重排人的判断节奏与协作结构。</p>
+          </article>
         </section>
 
         <div class="divider"></div>
 
         <section class="directory-section">
-          <h2>目录</h2>
+          <h2>结构入口（目录）</h2>
           <nav class="directory-nav">
             <a href="#">观念</a>
             <a href="#">阅读</a>
@@ -106,16 +114,14 @@
 
         <section class="paths-section">
           <h2>阅读路径</h2>
-          <div class="path-list">
-            <p>第一次来：观念 → 方法 → 自述</p>
-            <p>现实议题：现实 → 技术与未来 → 写作</p>
-          </div>
+          <p>第一次来：观念 → 方法 → 自述</p>
+          <p>现实议题：现实 → 技术与未来 → 写作</p>
         </section>
 
         <div class="divider"></div>
 
         <section class="tags-section">
-          <h2>常用标签</h2>
+          <h2>标签</h2>
           <div class="tag-cloud">
             <span>#主体性</span>
             <span>#现代性</span>
@@ -125,13 +131,7 @@
             <span>#社会结构</span>
           </div>
         </section>
-
-        <div class="divider"></div>
       </main>
-
-      <footer class="site-footer">
-        <p>© 2026 第二自然</p>
-      </footer>
     </div>
   </body>
 </html>
